@@ -1,69 +1,51 @@
-package com.example.reactmovie.models;
+package com.example.reactmovie.controllers.dto;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
+import com.example.reactmovie.models.Serie;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Entity
-@Table(name = "movie",
-        uniqueConstraints = {
-        @UniqueConstraint(columnNames = "id")
-        })
-public class Movie {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class SerieDto {
+
+    public LocalDateTime created_at;
+    public LocalDateTime updated_at;
     private Integer id;
-
-    @NotNull
-    @NotBlank
+    private String title;
     private String original_title;
-
-    @NotNull
-    @NotBlank
-    private String imdb_id;
-
-    @NotNull
-    @NotBlank
+    private Integer imdb_id;
     private Date release_date;
-
-    @NotNull
-    @NotBlank
     private Integer genre_id;
-
-    @NotNull
-    @NotBlank
     private String poster_url;
-
-    @NotNull
-    @NotBlank
-    private Boolean adult_content;
-
-    @NotNull
-    @NotBlank
+    private boolean adult_content;
     private String overview;
-
-    @NotNull
-    @NotBlank
     private String original_language;
-
-    @NotNull
-    @NotBlank
-    private Integer vote_count;
-
-    @NotBlank
-    @NotNull
+    private int vote_count;
     private String director;
+    private int episode_count;
 
-    @CreatedDate
-    private LocalDateTime created_at;
+    public SerieDto(Serie serie) {
+        this.id = serie.getId();
+        this.title = serie.getTitle();
+        this.original_title = serie.getOriginalTitle();
+        this.imdb_id = serie.getImdbId();
+        this.release_date = serie.getReleaseDate();
+        this.genre_id = serie.getGenreId();
+        this.poster_url = serie.getPosterUrl();
+        this.adult_content = serie.isAdultContent();
+        this.overview = serie.getOverview();
+        this.original_language = serie.getOriginalLanguage();
+        this.vote_count = serie.getVoteCount();
+        this.director = serie.getDirector();
+        this.episode_count = serie.getEpisodeCount();
+        this.created_at = serie.getCreatedAt();
+        this.updated_at = serie.getUpdatedAt();
+    }
 
-    @LastModifiedDate
-    private LocalDateTime updated_at;
+    public static List<SerieDto> convert(List<Serie> series) {
+        return series.stream().map(SerieDto::new).collect(Collectors.toList());
+    }
 
     public Integer getId() {
         return id;
@@ -71,6 +53,14 @@ public class Movie {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getOriginalTitle() {
@@ -81,11 +71,11 @@ public class Movie {
         this.original_title = original_title;
     }
 
-    public String getImdbId() {
+    public Integer getImdbId() {
         return imdb_id;
     }
 
-    public void setImdbId(String imdb_id) {
+    public void setImdbId(Integer imdb_id) {
         this.imdb_id = imdb_id;
     }
 
@@ -113,11 +103,11 @@ public class Movie {
         this.poster_url = poster_url;
     }
 
-    public Boolean getAdultContent() {
+    public boolean isAdultContent() {
         return adult_content;
     }
 
-    public void setAdultContent(Boolean adult_content) {
+    public void setAdultContent(boolean adult_content) {
         this.adult_content = adult_content;
     }
 
@@ -137,11 +127,11 @@ public class Movie {
         this.original_language = original_language;
     }
 
-    public Integer getVoteCount() {
+    public int getVoteCount() {
         return vote_count;
     }
 
-    public void setVoteCount(Integer vote_count) {
+    public void setVoteCount(int vote_count) {
         this.vote_count = vote_count;
     }
 
@@ -151,6 +141,14 @@ public class Movie {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    public int getEpisodeCount() {
+        return episode_count;
+    }
+
+    public void setEpisodeCount(int episode_count) {
+        this.episode_count = episode_count;
     }
 
     public LocalDateTime getCreatedAt() {

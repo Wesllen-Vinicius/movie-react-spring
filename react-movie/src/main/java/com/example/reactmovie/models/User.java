@@ -82,51 +82,51 @@ public class User {
                 this.email = email;
         }
 
-        public List<Movie> getRated_movies() {
+        public List<Movie> getRatedMovies() {
                 return rated_movies;
         }
 
-        public void setRated_movies(List<Movie> rated_movies) {
+        public void setRatedMovies(List<Movie> rated_movies) {
                 this.rated_movies = rated_movies;
         }
 
-        public List<Serie> getRated_series() {
+        public List<Serie> getRatedSeries() {
                 return rated_series;
         }
 
-        public void setRated_series(List<Serie> rated_series) {
+        public void setRatedSeries(List<Serie> rated_series) {
                 this.rated_series = rated_series;
         }
 
-        public List<Movie> getRelated_movies() {
+        public List<Movie> getRelatedMovies() {
                 return related_movies;
         }
 
-        public void setRelated_movies(List<Movie> related_movies) {
+        public void setRelatedMovies(List<Movie> related_movies) {
                 this.related_movies = related_movies;
         }
 
-        public List<Movie> getRelated_series() {
+        public List<Movie> getRelatedSeries() {
                 return related_series;
         }
 
-        public void setRelated_series(List<Movie> related_series) {
+        public void setRelatedSeries(List<Movie> related_series) {
                 this.related_series = related_series;
         }
 
-        public LocalDateTime getCreated_at() {
+        public LocalDateTime getCreatedAt() {
                 return created_at;
         }
 
-        public void setCreated_at(LocalDateTime created_at) {
+        public void setCreatedAt(LocalDateTime created_at) {
                 this.created_at = created_at;
         }
 
-        public LocalDateTime getUpdated_at() {
+        public LocalDateTime getUpdatedAt() {
                 return updated_at;
         }
 
-        public void setUpdated_at(LocalDateTime updated_at) {
+        public void setUpdatedAt(LocalDateTime updated_at) {
                 this.updated_at = updated_at;
         }
 }

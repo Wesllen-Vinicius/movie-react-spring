@@ -24,19 +24,19 @@ public class MovieDto {
     private LocalDateTime updated_at;
 
     public MovieDto(Movie movie) {
-        this.id = id;
-        this.original_title = original_title;
-        this.imdb_id = imdb_id;
-        this.release_date = release_date;
-        this.genre_id = genre_id;
-        this.poster_url = poster_url;
-        this.adult_content = adult_content;
-        this.overview = overview;
-        this.original_language = original_language;
-        this.vote_count = vote_count;
-        this.director = director;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
+        this.id = movie.getId();
+        this.original_title = movie.getOriginalTitle();
+        this.imdb_id = movie.getImdbId();
+        this.release_date = movie.getReleaseDate();
+        this.genre_id = movie.getGenreId();
+        this.poster_url = movie.getPosterUrl();
+        this.adult_content = movie.getAdultContent();
+        this.overview = movie.getOverview();
+        this.original_language = movie.getOriginalLanguage();
+        this.vote_count = movie.getVoteCount();
+        this.director = movie.getDirector();
+        this.created_at = movie.getCreatedAt();
+        this.updated_at = movie.getUpdatedAt();
     }
     public static List<MovieDto> convert(List<Movie> movies) {
         return movies.stream().map(MovieDto::new).collect(Collectors.toList());
@@ -50,51 +50,51 @@ public class MovieDto {
         this.id = id;
     }
 
-    public String getOriginal_title() {
+    public String getOriginalTitle() {
         return original_title;
     }
 
-    public void setOriginal_title(String original_title) {
+    public void setOriginalTitle(String original_title) {
         this.original_title = original_title;
     }
 
-    public String getImdb_id() {
+    public String getImdbId() {
         return imdb_id;
     }
 
-    public void setImdb_id(String imdb_id) {
+    public void setImdbId(String imdb_id) {
         this.imdb_id = imdb_id;
     }
 
-    public Date getRelease_date() {
+    public Date getReleaseDate() {
         return release_date;
     }
 
-    public void setRelease_date(Date release_date) {
+    public void setReleaseDate(Date release_date) {
         this.release_date = release_date;
     }
 
-    public Integer getGenre_id() {
+    public Integer getGenreId() {
         return genre_id;
     }
 
-    public void setGenre_id(Integer genre_id) {
+    public void setGenreId(Integer genre_id) {
         this.genre_id = genre_id;
     }
 
-    public String getPoster_url() {
+    public String getPosterUrl() {
         return poster_url;
     }
 
-    public void setPoster_url(String poster_url) {
+    public void setPosterUrl(String poster_url) {
         this.poster_url = poster_url;
     }
 
-    public Boolean getAdult_content() {
+    public Boolean getAdultContent() {
         return adult_content;
     }
 
-    public void setAdult_content(Boolean adult_content) {
+    public void setAdultContent(Boolean adult_content) {
         this.adult_content = adult_content;
     }
 
@@ -106,19 +106,19 @@ public class MovieDto {
         this.overview = overview;
     }
 
-    public String getOriginal_language() {
+    public String getOriginalLanguage() {
         return original_language;
     }
 
-    public void setOriginal_language(String original_language) {
+    public void setOriginalLanguage(String original_language) {
         this.original_language = original_language;
     }
 
-    public Integer getVote_count() {
+    public Integer getVoteCount() {
         return vote_count;
     }
 
-    public void setVote_count(Integer vote_count) {
+    public void setVoteCount(Integer vote_count) {
         this.vote_count = vote_count;
     }
 
@@ -130,19 +130,19 @@ public class MovieDto {
         this.director = director;
     }
 
-    public LocalDateTime getCreated_at() {
+    public LocalDateTime getCreatedAt() {
         return created_at;
     }
 
-    public void setCreated_at(LocalDateTime created_at) {
+    public void setCreatedAt(LocalDateTime created_at) {
         this.created_at = created_at;
     }
 
-    public LocalDateTime getUpdated_at() {
+    public LocalDateTime getUpdatedAt() {
         return updated_at;
     }
 
-    public void setUpdated_at(LocalDateTime updated_at) {
+    public void setUpdatedAt(LocalDateTime updated_at) {
         this.updated_at = updated_at;
     }
 }

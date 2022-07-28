@@ -1,15 +1,17 @@
 package com.example.reactmovie.repository;
 import com.example.reactmovie.models.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
 import java.util.Optional;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
-    Optional<Movie> findMovieByName(String name);
+    List<Movie> findByOriginalTitle(String originalTitle);
 
-    Optional<Movie> findMovieById(Integer id);
+//    Optional<Movie> findMovieById(Long id);
 
-    Boolean existsByName(String name);
+//    Boolean existsByOriginalTitle(String name);
 
-    Boolean existsById(Integer id);
+//    Boolean existsById(Integer id);
 }

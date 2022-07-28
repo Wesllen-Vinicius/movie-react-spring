@@ -88,51 +88,51 @@ public class Serie {
         this.title = title;
     }
 
-    public String getOriginal_title() {
+    public String getOriginalTitle() {
         return original_title;
     }
 
-    public void setOriginal_title(String original_title) {
+    public void setOriginalTitle(String original_title) {
         this.original_title = original_title;
     }
 
-    public Integer getImdb_id() {
+    public Integer getImdbId() {
         return imdb_id;
     }
 
-    public void setImdb_id(Integer imdb_id) {
+    public void setImdbId(Integer imdb_id) {
         this.imdb_id = imdb_id;
     }
 
-    public Date getRelease_date() {
+    public Date getReleaseDate() {
         return release_date;
     }
 
-    public void setRelease_date(Date release_date) {
+    public void setReleaseDate(Date release_date) {
         this.release_date = release_date;
     }
 
-    public Integer getGenre_id() {
+    public Integer getGenreId() {
         return genre_id;
     }
 
-    public void setGenre_id(Integer genre_id) {
+    public void setGenreId(Integer genre_id) {
         this.genre_id = genre_id;
     }
 
-    public String getPoster_url() {
+    public String getPosterUrl() {
         return poster_url;
     }
 
-    public void setPoster_url(String poster_url) {
+    public void setPosterUrl(String poster_url) {
         this.poster_url = poster_url;
     }
 
-    public boolean isAdult_content() {
+    public boolean isAdultContent() {
         return adult_content;
     }
 
-    public void setAdult_content(boolean adult_content) {
+    public void setAdultContent(boolean adult_content) {
         this.adult_content = adult_content;
     }
 
@@ -144,19 +144,19 @@ public class Serie {
         this.overview = overview;
     }
 
-    public String getOriginal_language() {
+    public String getOriginalLanguage() {
         return original_language;
     }
 
-    public void setOriginal_language(String original_language) {
+    public void setOriginalLanguage(String original_language) {
         this.original_language = original_language;
     }
 
-    public int getVote_count() {
+    public int getVoteCount() {
         return vote_count;
     }
 
-    public void setVote_count(int vote_count) {
+    public void setVoteCount(int vote_count) {
         this.vote_count = vote_count;
     }
 
@@ -168,27 +168,27 @@ public class Serie {
         this.director = director;
     }
 
-    public int getEpisode_count() {
+    public int getEpisodeCount() {
         return episode_count;
     }
 
-    public void setEpisode_count(int episode_count) {
+    public void setEpisodeCount(int episode_count) {
         this.episode_count = episode_count;
     }
 
-    public LocalDateTime getCreated_at() {
+    public LocalDateTime getCreatedAt() {
         return created_at;
     }
 
-    public void setCreated_at(LocalDateTime created_at) {
+    public void setCreatedAt(LocalDateTime created_at) {
         this.created_at = created_at;
     }
 
-    public LocalDateTime getUpdated_at() {
+    public LocalDateTime getUpdatedAt() {
         return updated_at;
     }
 
-    public void setUpdated_at(LocalDateTime updated_at) {
+    public void setUpdatedAt(LocalDateTime updated_at) {
         this.updated_at = updated_at;
     }
 }

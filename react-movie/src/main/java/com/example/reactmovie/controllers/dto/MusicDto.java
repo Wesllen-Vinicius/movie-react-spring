@@ -1,66 +1,45 @@
-package com.example.reactmovie.models;
+package com.example.reactmovie.controllers.dto;
 
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
+import com.example.reactmovie.models.Music;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
-@Entity
-@Table(name = "music",
-        uniqueConstraints = {
-        @UniqueConstraint(columnNames = "id")
-        })
-public class Music {
+public class MusicDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @NotNull
-    @NotBlank
     private String title;
-
-    @NotNull
-    @NotBlank
     private Date release_date;
-
-    @NotNull
-    @NotBlank
     private Integer genre_id;
-
-    @NotNull
-    @NotBlank
     private String language;
-
-    @NotNull
-    @NotBlank
     private String poster_url;
-
-    @NotNull
-    @NotBlank
     private int vote_count;
-
-    @NotNull
-    @NotBlank
     private boolean adult_content;
-
-    @NotNull
-    @NotBlank
     private String author;
-
-    @NotNull
-    @NotBlank
     private String duration;
-
-    @CreatedDate
     private LocalDateTime created_at;
-
-    @LastModifiedDate
     private LocalDateTime updated_at;
+
+    public MusicDto(Music music) {
+        this.id = music.getId();
+        this.title = music.getTitle();
+        this.release_date = music.getReleaseDate();
+        this.genre_id = music.getGenreId();
+        this.language = music.getLanguage();
+        this.poster_url = music.getPosterUrl();
+        this.vote_count = music.getVoteCount();
+        this.adult_content = music.isAdultContent();
+        this.author = music.getAuthor();
+        this.duration = music.getDuration();
+        this.created_at = music.getCreatedAt();
+        this.updated_at = music.getUpdatedAt();
+    }
+
+    public static List<MusicDto> convert(List<Music> musics) {
+        return musics.stream().map(MusicDto::new).collect(Collectors.toList());
+    }
 
     public Integer getId() {
         return id;
@@ -157,4 +136,5 @@ public class Music {
     public void setUpdatedAt(LocalDateTime updated_at) {
         this.updated_at = updated_at;
     }
+
 }
