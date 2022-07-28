@@ -26,11 +26,11 @@ public class Music {
 
     @NotNull
     @NotBlank
-    private Date release_date;
+    private Date releaseDate;
 
     @NotNull
     @NotBlank
-    private Integer genre_id;
+    private Integer genreId;
 
     @NotNull
     @NotBlank
@@ -38,15 +38,15 @@ public class Music {
 
     @NotNull
     @NotBlank
-    private String poster_url;
+    private String posterUrl;
 
     @NotNull
     @NotBlank
-    private int vote_count;
+    private int voteCount;
 
     @NotNull
     @NotBlank
-    private boolean adult_content;
+    private boolean adultContent;
 
     @NotNull
     @NotBlank
@@ -57,10 +57,10 @@ public class Music {
     private String duration;
 
     @CreatedDate
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    private LocalDateTime updated_at;
+    private LocalDateTime updatedAt;
 
     public Integer getId() {
         return id;
@@ -79,19 +79,19 @@ public class Music {
     }
 
     public Date getReleaseDate() {
-        return release_date;
+        return releaseDate;
     }
 
     public void setReleaseDate(Date release_date) {
-        this.release_date = release_date;
+        this.releaseDate = release_date;
     }
 
     public Integer getGenreId() {
-        return genre_id;
+        return genreId;
     }
 
     public void setGenreId(Integer genre_id) {
-        this.genre_id = genre_id;
+        this.genreId = genre_id;
     }
 
     public String getLanguage() {
@@ -103,27 +103,27 @@ public class Music {
     }
 
     public String getPosterUrl() {
-        return poster_url;
+        return posterUrl;
     }
 
     public void setPosterUrl(String poster_url) {
-        this.poster_url = poster_url;
+        this.posterUrl = poster_url;
     }
 
     public int getVoteCount() {
-        return vote_count;
+        return voteCount;
     }
 
     public void setVoteCount(int vote_count) {
-        this.vote_count = vote_count;
+        this.voteCount = vote_count;
     }
 
     public boolean isAdultContent() {
-        return adult_content;
+        return adultContent;
     }
 
     public void setAdultContent(boolean adult_content) {
-        this.adult_content = adult_content;
+        this.adultContent = adult_content;
     }
 
     public String getAuthor() {
@@ -143,18 +143,18 @@ public class Music {
     }
 
     public LocalDateTime getCreatedAt() {
-        return created_at;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime created_at) {
-        this.created_at = created_at;
+        this.createdAt = created_at;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updated_at;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+        this.updatedAt = updated_at;
     }
 }

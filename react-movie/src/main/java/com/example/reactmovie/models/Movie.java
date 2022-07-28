@@ -21,27 +21,28 @@ public class Movie {
 
     @NotNull
     @NotBlank
-    private String original_title;
+    private String originalTitle;
 
     @NotNull
     @NotBlank
-    private String imdb_id;
+    private String imdbId;
 
     @NotNull
     @NotBlank
-    private Date release_date;
+    private Date releaseDate;
 
     @NotNull
     @NotBlank
-    private Integer genre_id;
+    private Integer genreId;
 
     @NotNull
     @NotBlank
-    private String poster_url;
+    private String posterUrl;
 
     @NotNull
     @NotBlank
-    private Boolean adult_content;
+    private Boolean adultContent;
+
 
     @NotNull
     @NotBlank
@@ -49,21 +50,21 @@ public class Movie {
 
     @NotNull
     @NotBlank
-    private String original_language;
+    private String originalLanguage;
 
     @NotNull
     @NotBlank
-    private Integer vote_count;
+    private Integer voteCount;
 
     @NotBlank
     @NotNull
     private String director;
 
     @CreatedDate
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    private LocalDateTime updated_at;
+    private LocalDateTime updatedAt;
 
     public Integer getId() {
         return id;
@@ -74,51 +75,51 @@ public class Movie {
     }
 
     public String getOriginalTitle() {
-        return original_title;
+        return originalTitle;
     }
 
     public void setOriginalTitle(String original_title) {
-        this.original_title = original_title;
+        this.originalTitle = original_title;
     }
 
     public String getImdbId() {
-        return imdb_id;
+        return imdbId;
     }
 
     public void setImdbId(String imdb_id) {
-        this.imdb_id = imdb_id;
+        this.imdbId = imdb_id;
     }
 
     public Date getReleaseDate() {
-        return release_date;
+        return releaseDate;
     }
 
     public void setReleaseDate(Date release_date) {
-        this.release_date = release_date;
+        this.releaseDate = release_date;
     }
 
     public Integer getGenreId() {
-        return genre_id;
+        return genreId;
     }
 
     public void setGenreId(Integer genre_id) {
-        this.genre_id = genre_id;
+        this.genreId = genre_id;
     }
 
     public String getPosterUrl() {
-        return poster_url;
+        return posterUrl;
     }
 
     public void setPosterUrl(String poster_url) {
-        this.poster_url = poster_url;
+        this.posterUrl = poster_url;
     }
 
     public Boolean getAdultContent() {
-        return adult_content;
+        return adultContent;
     }
 
     public void setAdultContent(Boolean adult_content) {
-        this.adult_content = adult_content;
+        this.adultContent = adult_content;
     }
 
     public String getOverview() {
@@ -130,19 +131,19 @@ public class Movie {
     }
 
     public String getOriginalLanguage() {
-        return original_language;
+        return originalLanguage;
     }
 
     public void setOriginalLanguage(String original_language) {
-        this.original_language = original_language;
+        this.originalLanguage = original_language;
     }
 
     public Integer getVoteCount() {
-        return vote_count;
+        return voteCount;
     }
 
     public void setVoteCount(Integer vote_count) {
-        this.vote_count = vote_count;
+        this.voteCount = vote_count;
     }
 
     public String getDirector() {
@@ -154,18 +155,18 @@ public class Movie {
     }
 
     public LocalDateTime getCreatedAt() {
-        return created_at;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime created_at) {
-        this.created_at = created_at;
+        this.createdAt = created_at;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updated_at;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+        this.updatedAt = updated_at;
     }
 }
