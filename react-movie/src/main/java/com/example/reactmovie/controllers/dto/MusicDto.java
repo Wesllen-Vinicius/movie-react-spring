@@ -11,30 +11,30 @@ public class MusicDto {
 
     private Integer id;
     private String title;
-    private Date release_date;
-    private Integer genre_id;
+    private Date releaseDate;
+    private Integer genreId;
     private String language;
-    private String poster_url;
-    private int vote_count;
-    private boolean adult_content;
+    private String posterUrl;
+    private int voteCount;
+    private boolean adultContent;
     private String author;
     private String duration;
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public MusicDto(Music music) {
         this.id = music.getId();
         this.title = music.getTitle();
-        this.release_date = music.getReleaseDate();
-        this.genre_id = music.getGenreId();
+        this.releaseDate = music.getReleaseDate();
+        this.genreId = music.getGenreId();
         this.language = music.getLanguage();
-        this.poster_url = music.getPosterUrl();
-        this.vote_count = music.getVoteCount();
-        this.adult_content = music.isAdultContent();
+        this.posterUrl = music.getPosterUrl();
+        this.voteCount = music.getVoteCount();
+        this.adultContent = music.isAdultContent();
         this.author = music.getAuthor();
         this.duration = music.getDuration();
-        this.created_at = music.getCreatedAt();
-        this.updated_at = music.getUpdatedAt();
+        this.createdAt = music.getCreatedAt();
+        this.updatedAt = music.getUpdatedAt();
     }
 
     public static List<MusicDto> convert(List<Music> musics) {
@@ -58,19 +58,19 @@ public class MusicDto {
     }
 
     public Date getReleaseDate() {
-        return release_date;
+        return releaseDate;
     }
 
     public void setReleaseDate(Date release_date) {
-        this.release_date = release_date;
+        this.releaseDate = release_date;
     }
 
     public Integer getGenreId() {
-        return genre_id;
+        return genreId;
     }
 
     public void setGenreId(Integer genre_id) {
-        this.genre_id = genre_id;
+        this.genreId = genre_id;
     }
 
     public String getLanguage() {
@@ -82,27 +82,27 @@ public class MusicDto {
     }
 
     public String getPosterUrl() {
-        return poster_url;
+        return posterUrl;
     }
 
     public void setPosterUrl(String poster_url) {
-        this.poster_url = poster_url;
+        this.posterUrl = poster_url;
     }
 
     public int getVoteCount() {
-        return vote_count;
+        return voteCount;
     }
 
     public void setVoteCount(int vote_count) {
-        this.vote_count = vote_count;
+        this.voteCount = vote_count;
     }
 
     public boolean isAdultContent() {
-        return adult_content;
+        return adultContent;
     }
 
     public void setAdultContent(boolean adult_content) {
-        this.adult_content = adult_content;
+        this.adultContent = adult_content;
     }
 
     public String getAuthor() {
@@ -122,19 +122,19 @@ public class MusicDto {
     }
 
     public LocalDateTime getCreatedAt() {
-        return created_at;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime created_at) {
-        this.created_at = created_at;
+        this.createdAt = created_at;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updated_at;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+        this.updatedAt = updated_at;
     }
 
 }

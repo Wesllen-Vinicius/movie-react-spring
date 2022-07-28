@@ -9,38 +9,38 @@ import java.util.stream.Collectors;
 
 public class SerieDto {
 
-    public LocalDateTime created_at;
-    public LocalDateTime updated_at;
     private Integer id;
     private String title;
-    private String original_title;
-    private Integer imdb_id;
-    private Date release_date;
-    private Integer genre_id;
-    private String poster_url;
-    private boolean adult_content;
+    private String originalTitle;
+    private Integer imdbId;
+    private Date releaseDate;
+    private Integer genreId;
+    private String posterUrl;
+    private boolean adultContent;
     private String overview;
-    private String original_language;
-    private int vote_count;
+    private String originalLanguage;
+    private int voteCount;
     private String director;
-    private int episode_count;
+    private int episodeCount;
+    public LocalDateTime createdAt;
+    public LocalDateTime updatedAt;
 
     public SerieDto(Serie serie) {
         this.id = serie.getId();
         this.title = serie.getTitle();
-        this.original_title = serie.getOriginalTitle();
-        this.imdb_id = serie.getImdbId();
-        this.release_date = serie.getReleaseDate();
-        this.genre_id = serie.getGenreId();
-        this.poster_url = serie.getPosterUrl();
-        this.adult_content = serie.isAdultContent();
+        this.originalTitle = serie.getOriginalTitle();
+        this.imdbId = serie.getImdbId();
+        this.releaseDate = serie.getReleaseDate();
+        this.genreId = serie.getGenreId();
+        this.posterUrl = serie.getPosterUrl();
+        this.adultContent = serie.isAdultContent();
         this.overview = serie.getOverview();
-        this.original_language = serie.getOriginalLanguage();
-        this.vote_count = serie.getVoteCount();
+        this.originalLanguage = serie.getOriginalLanguage();
+        this.voteCount = serie.getVoteCount();
         this.director = serie.getDirector();
-        this.episode_count = serie.getEpisodeCount();
-        this.created_at = serie.getCreatedAt();
-        this.updated_at = serie.getUpdatedAt();
+        this.episodeCount = serie.getEpisodeCount();
+        this.createdAt = serie.getCreatedAt();
+        this.updatedAt = serie.getUpdatedAt();
     }
 
     public static List<SerieDto> convert(List<Serie> series) {
@@ -64,51 +64,51 @@ public class SerieDto {
     }
 
     public String getOriginalTitle() {
-        return original_title;
+        return originalTitle;
     }
 
     public void setOriginalTitle(String original_title) {
-        this.original_title = original_title;
+        this.originalTitle = original_title;
     }
 
     public Integer getImdbId() {
-        return imdb_id;
+        return imdbId;
     }
 
     public void setImdbId(Integer imdb_id) {
-        this.imdb_id = imdb_id;
+        this.imdbId = imdb_id;
     }
 
     public Date getReleaseDate() {
-        return release_date;
+        return releaseDate;
     }
 
     public void setReleaseDate(Date release_date) {
-        this.release_date = release_date;
+        this.releaseDate = release_date;
     }
 
     public Integer getGenreId() {
-        return genre_id;
+        return genreId;
     }
 
     public void setGenreId(Integer genre_id) {
-        this.genre_id = genre_id;
+        this.genreId = genre_id;
     }
 
     public String getPosterUrl() {
-        return poster_url;
+        return posterUrl;
     }
 
     public void setPosterUrl(String poster_url) {
-        this.poster_url = poster_url;
+        this.posterUrl = poster_url;
     }
 
     public boolean isAdultContent() {
-        return adult_content;
+        return adultContent;
     }
 
     public void setAdultContent(boolean adult_content) {
-        this.adult_content = adult_content;
+        this.adultContent = adult_content;
     }
 
     public String getOverview() {
@@ -120,19 +120,19 @@ public class SerieDto {
     }
 
     public String getOriginalLanguage() {
-        return original_language;
+        return originalLanguage;
     }
 
     public void setOriginalLanguage(String original_language) {
-        this.original_language = original_language;
+        this.originalLanguage = original_language;
     }
 
     public int getVoteCount() {
-        return vote_count;
+        return voteCount;
     }
 
     public void setVoteCount(int vote_count) {
-        this.vote_count = vote_count;
+        this.voteCount = vote_count;
     }
 
     public String getDirector() {
@@ -144,26 +144,26 @@ public class SerieDto {
     }
 
     public int getEpisodeCount() {
-        return episode_count;
+        return episodeCount;
     }
 
     public void setEpisodeCount(int episode_count) {
-        this.episode_count = episode_count;
+        this.episodeCount = episode_count;
     }
 
     public LocalDateTime getCreatedAt() {
-        return created_at;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime created_at) {
-        this.created_at = created_at;
+        this.createdAt = created_at;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updated_at;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+        this.updatedAt = updated_at;
     }
 }

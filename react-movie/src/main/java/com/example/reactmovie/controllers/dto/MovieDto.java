@@ -10,33 +10,33 @@ import java.util.stream.Collectors;
 public class MovieDto {
 
     private Integer id;
-    private String original_title;
-    private String imdb_id;
-    private Date release_date;
-    private Integer genre_id;
-    private String poster_url;
-    private Boolean adult_content;
+    private String originalTitle;
+    private String imdbId;
+    private Date releaseDate;
+    private Integer genreId;
+    private String posterUrl;
+    private Boolean adultContent;
     private String overview;
-    private String original_language;
-    private Integer vote_count;
+    private String originalLanguage;
+    private Integer voteCount;
     private String director;
-    private LocalDateTime created_at;
-    private LocalDateTime updated_at;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public MovieDto(Movie movie) {
         this.id = movie.getId();
-        this.original_title = movie.getOriginalTitle();
-        this.imdb_id = movie.getImdbId();
-        this.release_date = movie.getReleaseDate();
-        this.genre_id = movie.getGenreId();
-        this.poster_url = movie.getPosterUrl();
-        this.adult_content = movie.getAdultContent();
+        this.originalTitle = movie.getOriginalTitle();
+        this.imdbId = movie.getImdbId();
+        this.releaseDate = movie.getReleaseDate();
+        this.genreId = movie.getGenreId();
+        this.posterUrl = movie.getPosterUrl();
+        this.adultContent = movie.getAdultContent();
         this.overview = movie.getOverview();
-        this.original_language = movie.getOriginalLanguage();
-        this.vote_count = movie.getVoteCount();
+        this.originalLanguage = movie.getOriginalLanguage();
+        this.voteCount = movie.getVoteCount();
         this.director = movie.getDirector();
-        this.created_at = movie.getCreatedAt();
-        this.updated_at = movie.getUpdatedAt();
+        this.createdAt = movie.getCreatedAt();
+        this.updatedAt = movie.getUpdatedAt();
     }
     public static List<MovieDto> convert(List<Movie> movies) {
         return movies.stream().map(MovieDto::new).collect(Collectors.toList());
@@ -51,51 +51,51 @@ public class MovieDto {
     }
 
     public String getOriginalTitle() {
-        return original_title;
+        return originalTitle;
     }
 
     public void setOriginalTitle(String original_title) {
-        this.original_title = original_title;
+        this.originalTitle = original_title;
     }
 
     public String getImdbId() {
-        return imdb_id;
+        return imdbId;
     }
 
     public void setImdbId(String imdb_id) {
-        this.imdb_id = imdb_id;
+        this.imdbId = imdb_id;
     }
 
     public Date getReleaseDate() {
-        return release_date;
+        return releaseDate;
     }
 
     public void setReleaseDate(Date release_date) {
-        this.release_date = release_date;
+        this.releaseDate = release_date;
     }
 
     public Integer getGenreId() {
-        return genre_id;
+        return genreId;
     }
 
     public void setGenreId(Integer genre_id) {
-        this.genre_id = genre_id;
+        this.genreId = genre_id;
     }
 
     public String getPosterUrl() {
-        return poster_url;
+        return posterUrl;
     }
 
     public void setPosterUrl(String poster_url) {
-        this.poster_url = poster_url;
+        this.posterUrl = poster_url;
     }
 
     public Boolean getAdultContent() {
-        return adult_content;
+        return adultContent;
     }
 
     public void setAdultContent(Boolean adult_content) {
-        this.adult_content = adult_content;
+        this.adultContent = adult_content;
     }
 
     public String getOverview() {
@@ -107,19 +107,19 @@ public class MovieDto {
     }
 
     public String getOriginalLanguage() {
-        return original_language;
+        return originalLanguage;
     }
 
     public void setOriginalLanguage(String original_language) {
-        this.original_language = original_language;
+        this.originalLanguage = original_language;
     }
 
     public Integer getVoteCount() {
-        return vote_count;
+        return voteCount;
     }
 
     public void setVoteCount(Integer vote_count) {
-        this.vote_count = vote_count;
+        this.voteCount = vote_count;
     }
 
     public String getDirector() {
@@ -131,18 +131,18 @@ public class MovieDto {
     }
 
     public LocalDateTime getCreatedAt() {
-        return created_at;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime created_at) {
-        this.created_at = created_at;
+        this.createdAt = created_at;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updated_at;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+        this.updatedAt = updated_at;
     }
 }

@@ -24,27 +24,27 @@ public class Serie {
 
     @NotBlank
     @NotNull
-    private String original_title;
+    private String originalTitle;
 
     @NotBlank
     @NotNull
-    private Integer imdb_id;
+    private Integer imdbId;
 
     @NotBlank
     @NotNull
-    private Date release_date;
+    private Date releaseDate;
 
     @NotBlank
     @NotNull
-    private Integer genre_id;
+    private Integer genreId;
 
     @NotBlank
     @NotNull
-    private String poster_url;
+    private String posterUrl;
 
     @NotBlank
     @NotNull
-    private boolean adult_content;
+    private boolean adultContent;
 
     @NotBlank
     @NotNull
@@ -52,11 +52,11 @@ public class Serie {
 
     @NotBlank
     @NotNull
-    private String original_language;
+    private String originalLanguage;
 
     @NotBlank
     @NotNull
-    private int vote_count;
+    private int voteCount;
 
     @NotBlank
     @NotNull
@@ -64,13 +64,13 @@ public class Serie {
 
     @NotBlank
     @NotNull
-    private int episode_count;
+    private int episodeCount;
 
     @CreatedDate
-    public LocalDateTime created_at;
+    public LocalDateTime createdAt;
 
     @LastModifiedDate
-    public LocalDateTime updated_at;
+    public LocalDateTime updatedAt;
 
     public Integer getId() {
         return id;
@@ -89,51 +89,51 @@ public class Serie {
     }
 
     public String getOriginalTitle() {
-        return original_title;
+        return originalTitle;
     }
 
     public void setOriginalTitle(String original_title) {
-        this.original_title = original_title;
+        this.originalTitle = original_title;
     }
 
     public Integer getImdbId() {
-        return imdb_id;
+        return imdbId;
     }
 
     public void setImdbId(Integer imdb_id) {
-        this.imdb_id = imdb_id;
+        this.imdbId = imdb_id;
     }
 
     public Date getReleaseDate() {
-        return release_date;
+        return releaseDate;
     }
 
     public void setReleaseDate(Date release_date) {
-        this.release_date = release_date;
+        this.releaseDate = release_date;
     }
 
     public Integer getGenreId() {
-        return genre_id;
+        return genreId;
     }
 
     public void setGenreId(Integer genre_id) {
-        this.genre_id = genre_id;
+        this.genreId = genre_id;
     }
 
     public String getPosterUrl() {
-        return poster_url;
+        return posterUrl;
     }
 
     public void setPosterUrl(String poster_url) {
-        this.poster_url = poster_url;
+        this.posterUrl = poster_url;
     }
 
     public boolean isAdultContent() {
-        return adult_content;
+        return adultContent;
     }
 
     public void setAdultContent(boolean adult_content) {
-        this.adult_content = adult_content;
+        this.adultContent = adult_content;
     }
 
     public String getOverview() {
@@ -145,19 +145,19 @@ public class Serie {
     }
 
     public String getOriginalLanguage() {
-        return original_language;
+        return originalLanguage;
     }
 
     public void setOriginalLanguage(String original_language) {
-        this.original_language = original_language;
+        this.originalLanguage = original_language;
     }
 
     public int getVoteCount() {
-        return vote_count;
+        return voteCount;
     }
 
     public void setVoteCount(int vote_count) {
-        this.vote_count = vote_count;
+        this.voteCount = vote_count;
     }
 
     public String getDirector() {
@@ -169,26 +169,26 @@ public class Serie {
     }
 
     public int getEpisodeCount() {
-        return episode_count;
+        return episodeCount;
     }
 
     public void setEpisodeCount(int episode_count) {
-        this.episode_count = episode_count;
+        this.episodeCount = episode_count;
     }
 
     public LocalDateTime getCreatedAt() {
-        return created_at;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime created_at) {
-        this.created_at = created_at;
+        this.createdAt = created_at;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updated_at;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+        this.updatedAt = updated_at;
     }
 }

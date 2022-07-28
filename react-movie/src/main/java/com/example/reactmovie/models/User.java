@@ -7,7 +7,6 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.*;
 
 @Entity
 @Table(	name = "user",
@@ -35,20 +34,20 @@ public class User {
         private String email;
 
         @OneToMany
-        private List<Movie> rated_movies;
+        private List<Movie> ratedMovies;
 
         @OneToMany
-        private List<Serie> rated_series;
+        private List<Serie> ratedSeries;
 
         @OneToMany
-        private List<Movie> related_movies;
+        private List<Movie> relatedMovies;
 
         @OneToMany
-        private List<Movie> related_series;
+        private List<Movie> relatedSeries;
         @CreatedDate
-        public LocalDateTime created_at;
+        public LocalDateTime createdAt;
         @LastModifiedDate
-        public LocalDateTime updated_at;
+        public LocalDateTime updatedAt;
 
         public Integer getId() {
                 return id;
@@ -83,50 +82,50 @@ public class User {
         }
 
         public List<Movie> getRatedMovies() {
-                return rated_movies;
+                return ratedMovies;
         }
 
         public void setRatedMovies(List<Movie> rated_movies) {
-                this.rated_movies = rated_movies;
+                this.ratedMovies = rated_movies;
         }
 
         public List<Serie> getRatedSeries() {
-                return rated_series;
+                return ratedSeries;
         }
 
         public void setRatedSeries(List<Serie> rated_series) {
-                this.rated_series = rated_series;
+                this.ratedSeries = rated_series;
         }
 
         public List<Movie> getRelatedMovies() {
-                return related_movies;
+                return relatedMovies;
         }
 
         public void setRelatedMovies(List<Movie> related_movies) {
-                this.related_movies = related_movies;
+                this.relatedMovies = related_movies;
         }
 
         public List<Movie> getRelatedSeries() {
-                return related_series;
+                return relatedSeries;
         }
 
         public void setRelatedSeries(List<Movie> related_series) {
-                this.related_series = related_series;
+                this.relatedSeries = related_series;
         }
 
         public LocalDateTime getCreatedAt() {
-                return created_at;
+                return createdAt;
         }
 
         public void setCreatedAt(LocalDateTime created_at) {
-                this.created_at = created_at;
+                this.createdAt = created_at;
         }
 
         public LocalDateTime getUpdatedAt() {
-                return updated_at;
+                return updatedAt;
         }
 
         public void setUpdatedAt(LocalDateTime updated_at) {
-                this.updated_at = updated_at;
+                this.updatedAt = updated_at;
         }
 }

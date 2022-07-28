@@ -14,24 +14,24 @@ public class UserDto {
     private String name;
     private String password;
     private String email;
-    private List<Movie> rated_movies;
-    private List<Serie> rated_series;
-    private List<Movie> related_movies;
-    private List<Movie> related_series;
-    public LocalDateTime created_at;
-    public LocalDateTime updated_at;
+    private List<Movie> ratedMovies;
+    private List<Serie> ratedSeries;
+    private List<Movie> relatedMovies;
+    private List<Movie> relatedSeries;
+    public LocalDateTime createdAt;
+    public LocalDateTime updatedAt;
 
     public UserDto(User user) {
         this.id = user.getId();
         this.name = user.getName();
         this.password = user.getPassword();
         this.email = user.getEmail();
-        this.rated_movies = user.getRatedMovies();
-        this.rated_series = user.getRatedSeries();
-        this.related_movies = user.getRelatedMovies();
-        this.related_series = user.getRelatedSeries();
-        this.created_at = user.getCreatedAt();
-        this.updated_at = user.getUpdatedAt();
+        this.ratedMovies = user.getRatedMovies();
+        this.ratedSeries = user.getRatedSeries();
+        this.relatedMovies = user.getRelatedMovies();
+        this.relatedSeries = user.getRelatedSeries();
+        this.createdAt = user.getCreatedAt();
+        this.updatedAt = user.getUpdatedAt();
     }
 
     public static List<UserDto> convert(List<User> users) {
@@ -71,50 +71,50 @@ public class UserDto {
     }
 
     public List<Movie> getRatedMovies() {
-        return rated_movies;
+        return ratedMovies;
     }
 
     public void setRatedMovies(List<Movie> rated_movies) {
-        this.rated_movies = rated_movies;
+        this.ratedMovies = rated_movies;
     }
 
     public List<Serie> getRatedSeries() {
-        return rated_series;
+        return ratedSeries;
     }
 
     public void setRatedSeries(List<Serie> rated_series) {
-        this.rated_series = rated_series;
+        this.ratedSeries = rated_series;
     }
 
     public List<Movie> getRelatedMovies() {
-        return related_movies;
+        return relatedMovies;
     }
 
     public void setRelatedMovies(List<Movie> related_movies) {
-        this.related_movies = related_movies;
+        this.relatedMovies = related_movies;
     }
 
     public List<Movie> getRelatedSeries() {
-        return related_series;
+        return relatedSeries;
     }
 
     public void setRelatedSeries(List<Movie> related_series) {
-        this.related_series = related_series;
+        this.relatedSeries = related_series;
     }
 
     public LocalDateTime getCreatedAt() {
-        return created_at;
+        return createdAt;
     }
 
     public void setCreatedAt(LocalDateTime created_at) {
-        this.created_at = created_at;
+        this.createdAt = created_at;
     }
 
     public LocalDateTime getUpdatedAt() {
-        return updated_at;
+        return updatedAt;
     }
 
     public void setUpdatedAt(LocalDateTime updated_at) {
-        this.updated_at = updated_at;
+        this.updatedAt = updated_at;
     }
 }
