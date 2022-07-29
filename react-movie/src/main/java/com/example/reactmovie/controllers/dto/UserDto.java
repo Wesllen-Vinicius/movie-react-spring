@@ -14,10 +14,10 @@ public class UserDto {
     private String name;
     private String password;
     private String email;
-    private List<Movie> ratedMovies;
-    private List<Serie> ratedSeries;
-    private List<Movie> relatedMovies;
-    private List<Movie> relatedSeries;
+    private Movie ratedMovies;
+    private Serie ratedSeries;
+    private Movie relatedMovies;
+    private Movie relatedSeries;
     public LocalDateTime createdAt;
     public LocalDateTime updatedAt;
 
@@ -70,35 +70,35 @@ public class UserDto {
         this.email = email;
     }
 
-    public List<Movie> getRatedMovies() {
+    public Movie getRatedMovies() {
         return ratedMovies;
     }
 
-    public void setRatedMovies(List<Movie> rated_movies) {
+    public void setRatedMovies(Movie rated_movies) {
         this.ratedMovies = rated_movies;
     }
 
-    public List<Serie> getRatedSeries() {
+    public Serie getRatedSeries() {
         return ratedSeries;
     }
 
-    public void setRatedSeries(List<Serie> rated_series) {
+    public void setRatedSeries(Serie rated_series) {
         this.ratedSeries = rated_series;
     }
 
-    public List<Movie> getRelatedMovies() {
+    public Movie getRelatedMovies() {
         return relatedMovies;
     }
 
-    public void setRelatedMovies(List<Movie> related_movies) {
+    public void setRelatedMovies(Movie related_movies) {
         this.relatedMovies = related_movies;
     }
 
-    public List<Movie> getRelatedSeries() {
+    public Movie getRelatedSeries() {
         return relatedSeries;
     }
 
-    public void setRelatedSeries(List<Movie> related_series) {
+    public void setRelatedSeries(Movie related_series) {
         this.relatedSeries = related_series;
     }
 

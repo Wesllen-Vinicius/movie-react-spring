@@ -18,7 +18,7 @@ public class MovieController {
     @Autowired
     private MovieRepository movieRepository;
 
-    @RequestMapping(value = "/movie", method = RequestMethod.GET)
+    @RequestMapping(value = "/movies", method = RequestMethod.GET)
     public List<MovieDto> list(String title) {
         if (title == null) {
             List<Movie> movie = movieRepository.findAll();

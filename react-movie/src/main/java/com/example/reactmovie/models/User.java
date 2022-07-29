@@ -33,17 +33,17 @@ public class User {
         @Email
         private String email;
 
-        @OneToMany
-        private List<Movie> ratedMovies;
+        @ManyToOne
+        private Movie ratedMovies;
 
-        @OneToMany
-        private List<Serie> ratedSeries;
+        @ManyToOne
+        private Serie ratedSeries;
 
-        @OneToMany
-        private List<Movie> relatedMovies;
+        @ManyToOne
+        private Movie relatedMovies;
 
-        @OneToMany
-        private List<Movie> relatedSeries;
+        @ManyToOne
+        private Movie relatedSeries;
         @CreatedDate
         public LocalDateTime createdAt;
         @LastModifiedDate
@@ -81,35 +81,35 @@ public class User {
                 this.email = email;
         }
 
-        public List<Movie> getRatedMovies() {
+        public Movie getRatedMovies() {
                 return ratedMovies;
         }
 
-        public void setRatedMovies(List<Movie> rated_movies) {
+        public void setRatedMovies(Movie rated_movies) {
                 this.ratedMovies = rated_movies;
         }
 
-        public List<Serie> getRatedSeries() {
+        public Serie getRatedSeries() {
                 return ratedSeries;
         }
 
-        public void setRatedSeries(List<Serie> rated_series) {
+        public void setRatedSeries(Serie rated_series) {
                 this.ratedSeries = rated_series;
         }
 
-        public List<Movie> getRelatedMovies() {
+        public Movie getRelatedMovies() {
                 return relatedMovies;
         }
 
-        public void setRelatedMovies(List<Movie> related_movies) {
+        public void setRelatedMovies(Movie related_movies) {
                 this.relatedMovies = related_movies;
         }
 
-        public List<Movie> getRelatedSeries() {
+        public Movie getRelatedSeries() {
                 return relatedSeries;
         }
 
-        public void setRelatedSeries(List<Movie> related_series) {
+        public void setRelatedSeries(Movie related_series) {
                 this.relatedSeries = related_series;
         }
 
