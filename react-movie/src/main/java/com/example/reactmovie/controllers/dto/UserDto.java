@@ -26,10 +26,6 @@ public class UserDto {
         this.name = user.getName();
         this.password = user.getPassword();
         this.email = user.getEmail();
-        this.ratedMovies = user.getRatedMovies();
-        this.ratedSeries = user.getRatedSeries();
-        this.relatedMovies = user.getRelatedMovies();
-        this.relatedSeries = user.getRelatedSeries();
         this.createdAt = user.getCreatedAt();
         this.updatedAt = user.getUpdatedAt();
     }

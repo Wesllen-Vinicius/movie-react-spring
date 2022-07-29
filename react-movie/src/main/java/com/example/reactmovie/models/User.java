@@ -6,7 +6,6 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table(	name = "user",
@@ -32,18 +31,6 @@ public class User {
         @NotNull
         @Email
         private String email;
-
-        @ManyToOne
-        private Movie ratedMovies;
-
-        @ManyToOne
-        private Serie ratedSeries;
-
-        @ManyToOne
-        private Movie relatedMovies;
-
-        @ManyToOne
-        private Movie relatedSeries;
         @CreatedDate
         public LocalDateTime createdAt;
         @LastModifiedDate
@@ -80,39 +67,6 @@ public class User {
         public void setEmail(String email) {
                 this.email = email;
         }
-
-        public Movie getRatedMovies() {
-                return ratedMovies;
-        }
-
-        public void setRatedMovies(Movie rated_movies) {
-                this.ratedMovies = rated_movies;
-        }
-
-        public Serie getRatedSeries() {
-                return ratedSeries;
-        }
-
-        public void setRatedSeries(Serie rated_series) {
-                this.ratedSeries = rated_series;
-        }
-
-        public Movie getRelatedMovies() {
-                return relatedMovies;
-        }
-
-        public void setRelatedMovies(Movie related_movies) {
-                this.relatedMovies = related_movies;
-        }
-
-        public Movie getRelatedSeries() {
-                return relatedSeries;
-        }
-
-        public void setRelatedSeries(Movie related_series) {
-                this.relatedSeries = related_series;
-        }
-
         public LocalDateTime getCreatedAt() {
                 return createdAt;
         }
