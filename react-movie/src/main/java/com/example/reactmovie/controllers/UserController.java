@@ -21,7 +21,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
     public List<UserDto> list(String userName){
         if(userName == null) {
             List<User> users = userRepository.findAll();
